@@ -1,3 +1,4 @@
+/* Helps us utilize tailwind, whatever tf that is */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,0 +1,25 @@
+1. run "npx create-next-app@latest ./"
+
+Log in with NextAuth + Google Authentication
+Supports Tags
+
+GOOGLE AUTH TUT ----
+1. Go to https://console.cloud.google.com/
+2. Create New Project "promptopia"
+3. Register App OAuth consent screen 
+4. Credentials > Create OAuth client ID
+5. Get Client ID + Client Secret > Paste in .env
+
+
+Questions:
+- wtf is tailwind : tailwind is a CSS Framework that provides a set of pre-built classNames you can use. It also supports themes. You can still create + use your own styles with a seperate css file.
+
+-  server compoennts should be used when fetching data, but client components should be used when using state and hooks. Most of my components that fetch data also use state and hooks- so what should I do?
+- Have i been ammkign my react components wrong :,[
+- What is static and dynamic metadata? What is metadata?
+
+Metadata:  information about a web page that is included in the HTML document's <head> section, important for SEO.
+
+Static Metadata: metadata that is the same for all instances of a particular page (titles, descriptions, keywords, and canonical URLs)
+
+Dynamic Metadata: metadata that can vary based on the content or context of the page, generated dynamically at runtime (like Twitter Cards)
