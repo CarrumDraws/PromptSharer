@@ -16,7 +16,8 @@ const handler = NextAuth({
   callbacks: {
     // Triggers after signIn(): Check if user already exists, if not then create new user + save to DB
     async signIn({ profile }) {
-      console.log("signIn");
+      console.log("SignIn Callback");
+      console.log(profile ? profile : "No Profile");
       try {
         // Our routes are "serverless."
         // Route only runs when server gets called.
@@ -44,13 +45,24 @@ const handler = NextAuth({
         return false;
       }
     },
+    async jwt({ token, account, profile }) {
+      // user, account, profile and isNewUser are ONLY passed in the FIRST time.
+      // In subsequent calls, only token will be available.
+      // You'll have to save the data to token.
+      if (profile) {
+        token.profile = profile;
+      }
+      return token;
+    },
     // Trigger when session is called: Tracks which users are online
-    async session({ session }) {
-      console.log("session");
+    async session({ session, user, token }) {
+      console.log("Session Callback");
+      console.log(user ? user : "No User"); // User is always null lmfao
       const sessionUser = await User.findOne({
         email: session.user.email,
       });
       session.user.id = sessionUser._id.toString(); // Update userID
+      session.user.profile = token.profile; // Set more session data like so
       return session;
     },
   },
