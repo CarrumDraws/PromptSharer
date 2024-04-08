@@ -10,13 +10,18 @@ GOOGLE AUTH TUT ----
 4. Credentials > Create OAuth client ID
 5. Get Client ID + Client Secret > Paste in .env
 
+NextAuth Tut ----
+
+
+Routing Tut ----
+Use <Link href="/route"> to get between places
 
 Questions:
-- wtf is tailwind : tailwind is a CSS Framework that provides a set of pre-built classNames you can use. It also supports themes. You can still create + use your own styles with a seperate css file.
-
 -  server compoennts should be used when fetching data, but client components should be used when using state and hooks. Most of my components that fetch data also use state and hooks- so what should I do?
-- Have i been ammkign my react components wrong :,[
-- What is static and dynamic metadata? What is metadata?
+- Have i been msking my react components wrong? Should I instead use plain variables and not useState?
+
+Definitions:
+Tailwind : tailwind is a CSS Framework that provides a set of pre-built classNames you can use. It also supports themes. You can still create + use your own styles with a seperate css file.
 
 Metadata:  information about a web page that is included in the HTML document's <head> section, important for SEO.
 
