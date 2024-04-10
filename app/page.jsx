@@ -3,7 +3,7 @@ import Feed from "@components/Feed";
 // This is being rendered as a SERVER-SIDE COMPONENT.
 // All components in Next.js project default as REACT-SERVER COMPONENTS. (SSR)
 // add "use client" to turn it into a client-side component.
-// Anytime you use hooks/state/interactivity(like onClick) in react, you need to add "use client", as state management in react is handled on the clientside. (WHAT?!)
+// Anytime you use hooks/state/interactivity(like onClick) in react, you need to add "use client", as state management in react is handled on the clientside.
 // Basically, when theres an error, turn it into a client component.
 
 const Home = () => {
