@@ -1,4 +1,5 @@
 import Feed from "@components/Feed";
+import { Suspense } from "react";
 
 // This is being rendered as a SERVER-SIDE COMPONENT.
 // All components in Next.js project default as REACT-SERVER COMPONENTS. (SSR)
@@ -20,8 +21,9 @@ const Home = () => {
         Promptopia is an open-source AI prompting tool for discovering,
         creating, and sharing prompts.
       </p>
-
-      <Feed />
+      <Suspense fallback={<div>Awaiting Feed</div>}>
+        <Feed />
+      </Suspense>
     </section>
   );
 };

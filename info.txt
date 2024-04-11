@@ -1,7 +1,20 @@
 1. run "npx create-next-app@latest ./"
 
+Start with 'npm run dev'
+
 Log in with NextAuth + Google Authentication
 Supports Tags
+
+Things to Implement: 
+- Search 
+- Other User Profiles
+- Skeleton Animations
+
+Observations ----
+- Next.js stores backend server routes in an API folder.
+These routes can be accessed from the clientside with fetch calls.
+- Components default to server components, but can be client components. Any component that uses a react hook / state should be client components.
+- NextAuth uses sessions
 
 GOOGLE AUTH TUT ----
 1. Go to https://console.cloud.google.com/

@@ -44,6 +44,7 @@ function Feed() {
           className="search_input peer"
         />
       </form>
+
       <PromptCardList data={posts} handleTagClick={() => {}} />
     </section>
   );
