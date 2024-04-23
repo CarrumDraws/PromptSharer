@@ -15,8 +15,8 @@ function CreatePropmt() {
 
   const createPrompt = async (e) => {
     e.preventDefault(); // prevent default behavior of browser on form submit (prevents reloads)
-
     setSubmitting(true); // Can be used as a loader(?)
+
     try {
       // Routes to our API folder
       const response = await fetch("/api/prompt/new", {

@@ -1,6 +1,7 @@
 import "@styles/globals.css";
 import Nav from "@components/Nav";
 import Provider from "@components/Provider";
+
 // Commonly Used Functions/Functionalities, Providers etc exist here!
 // They can then be used throguhout the app.
 
