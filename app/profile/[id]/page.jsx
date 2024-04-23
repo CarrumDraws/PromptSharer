@@ -7,8 +7,6 @@ function TheirProfile({ params }) {
   const [user, setUser] = useState({});
   const [posts, setPosts] = useState([]);
 
-  // `/profile/${post.creator._id}?name=${post.creator.username}`
-
   useEffect(() => {
     const fetchUser = async () => {
       const response = await fetch(`/api/users/${params.id}`);

@@ -8,12 +8,10 @@ const PromptSchema = new Schema({
   prompt: {
     type: String,
     required: [true, "Prompt is Required"],
-    // index: true, // Makes the field Text Searchable
   },
   tag: {
     type: String,
     required: [true, "Tag is Required"],
-    // index: true,
   },
 });
 
@@ -21,6 +19,5 @@ const PromptSchema = new Schema({
 PromptSchema.index({ prompt: "text", tag: "text" });
 
 const Prompt = models.Prompt || model("Prompt", PromptSchema);
-// Prompt.createIndexes();
 
 export default Prompt;

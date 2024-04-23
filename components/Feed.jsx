@@ -3,20 +3,6 @@
 import React, { useState, useEffect } from "react";
 import PromptCard from "./PromptCard";
 
-const PromptCardList = ({ data, handleTagClick }) => {
-  return (
-    <div className="mt-16 prompt_layout">
-      {data.map((post) => (
-        <PromptCard
-          key={post._id}
-          post={post}
-          handleTagClick={handleTagClick}
-        />
-      ))}
-    </div>
-  );
-};
-
 function Feed() {
   const [searchText, setSearchText] = useState("");
   const [posts, setPosts] = useState([]);
@@ -33,6 +19,7 @@ function Feed() {
       const data = await response.json();
       setPosts(data);
     };
+    // If theres text, search posts by query- else, fetch all.
     e.target.value == "" ? fetchPosts() : searchPosts();
   };
 
@@ -62,5 +49,18 @@ function Feed() {
     </section>
   );
 }
+const PromptCardList = ({ data, handleTagClick }) => {
+  return (
+    <div className="mt-16 prompt_layout">
+      {data.map((post) => (
+        <PromptCard
+          key={post._id}
+          post={post}
+          handleTagClick={handleTagClick}
+        />
+      ))}
+    </div>
+  );
+};
 
 export default Feed;
