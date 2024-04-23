@@ -4,7 +4,7 @@ import PromptCard from "./PromptCard";
 function Profile({ name, desc, data, handleEdit, handleDelete }) {
   return (
     <section className="w-full">
-      <h1 className="head_text text-left">{name}'s Profile</h1>
+      <h1 className="head_text text-left">{name} Profile</h1>
       <p className="desc text-left">{desc}</p>
       <div className="mt-10 prompt_layout">
         {data.map((post) => (

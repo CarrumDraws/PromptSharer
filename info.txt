@@ -16,6 +16,8 @@ NextAuth Tut ----
 Routing Tut ----
 Use <Link href="/route"> to get between places
 
+Start wit "npm run dev"
+
 Questions:
 -  server compoennts should be used when fetching data, but client components should be used when using state and hooks. Most of my components that fetch data also use state and hooks- so what should I do?
 - Have i been msking my react components wrong? Should I instead use plain variables and not useState?

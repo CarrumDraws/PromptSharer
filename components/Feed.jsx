@@ -21,7 +21,20 @@ function Feed() {
   const [searchText, setSearchText] = useState("");
   const [posts, setPosts] = useState([]);
 
-  const handleSearchChange = (e) => {};
+  const handleSearchChange = (e) => {
+    setSearchText(e.target.value);
+    const searchPosts = async () => {
+      const response = await fetch(`/api/search?query=${e.target.value}`);
+      const data = await response.json();
+      setPosts(data);
+    };
+    const fetchPosts = async () => {
+      const response = await fetch("/api/prompt");
+      const data = await response.json();
+      setPosts(data);
+    };
+    e.target.value == "" ? fetchPosts() : searchPosts();
+  };
 
   useEffect(() => {
     const fetchPosts = async () => {
